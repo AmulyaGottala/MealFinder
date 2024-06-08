@@ -1,8 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const selectedCategory =
-    localStorage.getItem("selectedCategory") || "Seafood";
-  const categoryDescription = localStorage.getItem("categoryDescription") || "";
-  displayCategoryDescription(categoryDescription);
+  const selectedCategory = localStorage.getItem("selectedCategory");
+  const categoryDescription = localStorage.getItem("categoryDescription");
+  displayCategoryDescription(categoryDescription, selectedCategory);
   fetchMeals(selectedCategory);
 });
 
@@ -18,11 +17,21 @@ async function fetchMeals(category) {
   }
 }
 
-function displayCategoryDescription(description) {
+function displayCategoryDescription(description, selectedCategory) {
   const descriptionDiv = document.createElement("div");
   descriptionDiv.setAttribute("class", "category-description");
-  descriptionDiv.innerHTML = `<p>${description}</p>`;
+  descriptionDiv.innerHTML = `
+  <div class="description">
+ <h3>${selectedCategory}</h3>
+  <p >${description}</p>
+  </div>
+  <div class="meal-heading">
+  <h3>MEALS</h3>
+  <hr/>
+  </div>`;
   const mealsContainer = document.getElementById("meals-container");
+  console.log(mealsContainer);
+
   mealsContainer.insertBefore(descriptionDiv, mealsContainer.firstChild);
 }
 
