@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Meals</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <nav class="nav-bar">
+      <h4><i class="fa-solid fa-utensils"></i> MEAL FINDER</h4>
+      <div>
+        <span class="hamburger-icon"><i class="fa-solid fa-bars"></i></span>
+        <ul class="side-menu" type="none">
+          <li class="x-mark"><i class="fa-regular fa-circle-xmark"></i></li>
+          <li>Beef</li>
+          <li>Chicken</li>
+          <li>Dessert</li>
+          <li>Lamb</li>
+          <li>Miscellaneous</li>
+          <li>Pasta</li>
+          <li>Pork</li>
+          <li>SeaFood</li>
+          <li>Side</li>
+          <li>Starter</li>
+          <li>Vegan</li>
+          <li>Vegetarian</li>
+          <li>Breakfast</li>
+          <li>Goat</li>
+        </ul>
+      </div>
+    </nav>
+    <main>
+      <div class="search-container">
+        <span class="search">
+          <input
+            type="text"
+            class="search-input"
+            placeholder="Search recipes here..."
+          />
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </span>
+        <h2>What are your favorite cuisines?</h2>
+        <p>PERSONALIZE YOUR EXPERIENCE</p>
+      </div>
+    </main>
+    <div class="container">
+      <h3>MEALS</h3>
+      <hr />
+      <div id="meals-container"></div>
+    </div>
+    <script src="./meals.js"></script>
+  </body>
+</html>
